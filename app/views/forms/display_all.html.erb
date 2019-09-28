@@ -1,0 +1,22 @@
+<% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+      <a href="#" data-dismiss="alert" class="close">×</a>
+      <ul>
+        <li>
+          <%= value %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+  
+  <h1 class="text-center" style="color:magenta;"> Welcome to Google forms </h1>
+  
+  
+  <br>
+  
+  <a href="/forms/new" class="btn btn-primary my-4 mr-1" style="float:right;">Create a new Form </a>
+  
+  <%= react_component("DisplayAllForms", {forms:  @forms }) %>
+
+
+

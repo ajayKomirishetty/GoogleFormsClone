@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>You are editing editing Form <h3 style="color:magenta;"><%= @form.title %> </h3></h2>
+  <form action="/forms/<%= @form.id  %>/edit">
+    <input type="hidden" name="lock_version" value="<%= @form.lock_version %>"> 
+    <div class="form-group" style="padding-top:50px">
+       <label for="id">id:</label>
+       <input type="text" class="form-control" id="id" placeholder="Enter product name" disabled="disabled" name="id" value = "<%= @form.id %>"value = "<%= @form.id %>">
+    </div>
+    <div class="form-group">
+      <label for="title">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter form title" name="title" value = "<%= @form.title %>"value = "<%= @form.title %>">
+    </div>
+    <div class="form-group">
+      <label for="email">Description:</label>
+      <input type="text" class="form-control" id="description" placeholder="Enter form description" name="description"  value = "<%= @form.description %>">
+    </div>
+    <button type="submit" class="btn btn-default btn-primary">Update</button>
+  </form>
+</div>
