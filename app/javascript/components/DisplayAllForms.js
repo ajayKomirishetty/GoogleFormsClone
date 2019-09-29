@@ -1,4 +1,7 @@
 import React from "react"
+import GoogleFornCard from "./GoogleFormCard"
+import { CardDeck } from 'reactstrap';
+
 
 class DisplayAllForms extends React.Component{
   constructor(props){
@@ -12,34 +15,15 @@ class DisplayAllForms extends React.Component{
 
     var forms= this.state.forms.map((form) => {
       return (
-        <tr key={form.id}>
-          <td>{form.id}</td>
-          <td>{form.title}</td>
-          <td>{form.description}</td>
-          <td><a href={"/forms/"+form.id}>view</a></td>
-        </tr>
+        <GoogleFornCard form = {form}/>
       )
     });
 
     return(
-      <React.Fragment>
-        <div className="table-responsive">          
-          <table className="table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>View</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-                {forms}
-
-            </tbody>
-          </table>
-        </div>
+      <React.Fragment>   
+        <CardDeck> 
+          {forms}  
+        </CardDeck>       
       </React.Fragment>
     )
   }
