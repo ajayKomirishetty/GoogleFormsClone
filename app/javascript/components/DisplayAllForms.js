@@ -34,22 +34,9 @@ class DisplayAllForms extends React.Component{
               </tr>
             </thead>
             <tbody>
-        
-
-            
-                {forms}
-            
-
-            {/* <% @forms.each do |form| %>
               
-              <tr>
-                <td><%= form.id %></td>
-                <td><%= form.title %></td>
-                <td><%= form.description %></td>
-                # <td><%= product.price %></td>
-                <td><a href="/products/<%= form.id %>">view</a></td>
-              </tr>
-              <% end %> */}
+                {forms}
+
             </tbody>
           </table>
         </div>
